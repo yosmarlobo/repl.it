@@ -24,3 +24,26 @@ respuesta_1 = input("\nTu respuesta: ")
 
 while respuesta_1 not in ("a", "b", "c", "d"):
   respuesta_1 = input("Debes responder a, b, c o d. Ingresa nuevamente tu respuesta: ")
+
+# Pregunta 2
+print("\n1) ¿Cual de estos lenguajes de programación es de más bajo nivel?")
+print("a) Python")
+print("b) Java")
+print("c) PHP")
+print("d) Assembly")
+
+# Almacenamos la rspuesta del usuario en la variable "respuesta_2"
+respuesta_2 = input("\nTu respuesta: ")
+
+while respuesta_2 not in ("a", "b", "c", "d"):
+  respuesta_2 = input("Debes responder a, b, c o d. Ingresa nuevamente tu respuesta: ")
+
+# Ahora, verificamos su respuesta para mandar un mensaje de acierto o de error
+if respuesta_2 == "a":
+  print("Incorrecto!", nombre, "Python es un lenguaje de alto nivel")
+elif respuesta_2 == "b":
+  print("Incorrecto!", nombre, "Java es un lenguaje de alto nivel")
+elif respuesta_2 == "c":
+  print("Incorrecto!", nombre, "PHP es un lenguaje de alto nivel")
+else:
+  print("Muy bien", nombre, "!")
