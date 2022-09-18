@@ -1,6 +1,10 @@
+# Para implementar puntajes, crearemos una nueva variable llamada "puntaje", la que inicializamos en 0.
+puntaje = 0
+
 # Lo primero es mostrar en pantalla el texto de bienvenida para quien juegue tu trivia
 print ("Bienvenido a mi trivia sobre computación")
 print ("Pondremos a prueba tus conocimientos")
+print("Tienes", puntaje, "puntos")
 
 # Agregaremos personalización para nuestros jugadores, preguntando y almacenando sus nombres en una variable
 
@@ -25,12 +29,19 @@ respuesta_1 = input("\nTu respuesta: ")
 while respuesta_1 not in ("a", "b", "c", "d"):
   respuesta_1 = input("Debes responder a, b, c o d. Ingresa nuevamente tu respuesta: ")
 
+# Ahora, verificamos su respuesta para mandar un mensaje de acierto o de error
+if respuesta_1 == "b":
+  puntaje += 10
+  print("Muy bien", nombre, "!")
+else:
+  print("Incorrecto", nombre, "!")
+
 # Pregunta 2
-print("\n1) ¿Cual de estos lenguajes de programación es de más bajo nivel?")
-print("a) Python")
-print("b) Java")
-print("c) PHP")
-print("d) Assembly")
+print ("\n1) ¿Cual de estos lenguajes de programación es de más bajo nivel?")
+print ("a) Python")
+print ("b) Java")
+print ("c) PHP")
+print ("d) Assembly")
 
 # Almacenamos la rspuesta del usuario en la variable "respuesta_2"
 respuesta_2 = input("\nTu respuesta: ")
@@ -40,10 +51,13 @@ while respuesta_2 not in ("a", "b", "c", "d"):
 
 # Ahora, verificamos su respuesta para mandar un mensaje de acierto o de error
 if respuesta_2 == "a":
-  print("Incorrecto!", nombre, "Python es un lenguaje de alto nivel")
+  print ("Incorrecto!", nombre, "Python es un lenguaje de alto nivel")
 elif respuesta_2 == "b":
-  print("Incorrecto!", nombre, "Java es un lenguaje de alto nivel")
+  print ("Incorrecto!", nombre, "Java es un lenguaje de alto nivel")
 elif respuesta_2 == "c":
-  print("Incorrecto!", nombre, "PHP es un lenguaje de alto nivel")
+  print ("Incorrecto!", nombre, "PHP es un lenguaje de alto nivel")
 else:
-  print("Muy bien", nombre, "!")
+  puntaje += 10
+  print ("Muy bien", nombre, "!")
+
+print ("Gracias", nombre, "por jugar mi trivia, alcanzaste", puntaje, "puntos")
