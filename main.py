@@ -38,6 +38,9 @@ if respuesta_1 == "b":
 else:
   print ("Incorrecto", nombre, "!")
 
+
+print(nombre, "llevas", puntaje, "puntos")
+
 # Pregunta 2
 print ("\n1) ¿Cual de estos lenguajes de programación es de más bajo nivel?")
 print ("a) Python")
@@ -45,7 +48,7 @@ print ("b) Java")
 print ("c) PHP")
 print ("d) Assembly")
 
-# Almacenamos la rspuesta del usuario en la variable "respuesta_2"
+# Almacenamos la respuesta del usuario en la variable "respuesta_2"
 respuesta_2 = input("\nTu respuesta: ")
 
 while respuesta_2 not in ("a", "b", "c", "d"):
@@ -61,5 +64,34 @@ elif respuesta_2 == "c":
 else:
   puntaje += 10
   print ("Muy bien", nombre, "!")
+
+print(nombre, "llevas", puntaje, "puntos")
+
+# Pregunta 3
+print ("\n1) ¿En que lenguaje se progamo Minecraft?")
+print ("a) Python")
+print ("b) Java")
+print ("c) PHP")
+print ("d) Assembly")
+
+# Almacenamos la respuesta del usuario en la variable "respuesta_3"
+respuesta_3 = input("\nTu respuesta: ")
+
+while respuesta_3 not in ("a", "b", "c", "d"):
+  respuesta_3 = input ("Debes responder a, b, c o d. Ingresa nuevamente tu respuesta: ")
+
+if respuesta_3 == "a":
+  print ("Totalmente incorrecto! ...")
+  puntaje = puntaje / 2
+elif respuesta_3 == "d":
+  print ("...")
+  puntaje = puntaje + 5
+elif respuesta_3 == "c":
+  print ("Incorrecto! ...")
+  puntaje = puntaje - 5
+else:
+  print ("Correcto! ...")
+  puntaje = puntaje * 2
+
 
 print ("Gracias", nombre, "por jugar mi trivia, alcanzaste", puntaje, "puntos")
